@@ -1,0 +1,42 @@
+.container {
+  width: 47rem;
+  height: 40rem;
+  display: flex;
+  flex-wrap: wrap;
+  /* justify-content: center; */
+
+  margin: auto;
+  margin-top: 1rem;
+  border: 1px solid red;
+  padding: 1rem;
+}
+.App {
+  margin-bottom: 1rem;
+}
+button {
+  position: absolute;
+  width: 6rem;
+  height: 2rem;
+  top: 26rem;
+  right: 5rem;
+}
+.container > table > tr {
+}
+.container > table > tr > td {
+  max-width: 10rem;
+  border: 1px solid black;
+  word-wrap: break-word;
+}
+.container > table > tr > td > input {
+  width: 8rem;
+  height: 2rem;
+  border-radius: 1rem;
+  margin: 0.5rem 0 0 0.3rem;
+  /* border: none; */
+  outline: none;
+  padding-left: 0.2rem;
+}
+.container > table > tr > td > h3 {
+  font-weight: 400;
+  text-align: center;
+}

@@ -1,0 +1,21 @@
+.block {
+  width: 9rem;
+  height: 9rem;
+  border: 1px solid black;
+  /* margin: 1rem; */
+  /* overflow-y: scroll; */
+  margin: 0.5rem;
+  position: relative;
+}
+.block > h1 {
+  overflow-wrap: break-word;
+  color: blue;
+}
+.block > input {
+  width: 8rem;
+  height: 2rem;
+  border-radius: 1rem;
+  margin: 0.5rem 0 0 0.3rem;
+  /* border: none; */
+  outline: none;
+}
