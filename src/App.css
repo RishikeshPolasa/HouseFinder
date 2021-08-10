@@ -1,13 +1,15 @@
 .container {
-  width: 47rem;
+  width: 46.2rem;
   height: 40rem;
   display: flex;
   flex-wrap: wrap;
+
   /* justify-content: center; */
 
   margin: auto;
   margin-top: 1rem;
-  border: 1px solid red;
+  border: 1px solid black;
+  border-radius: 1rem;
   padding: 1rem;
 }
 .App {
@@ -24,7 +26,7 @@ button {
 }
 .container > table > tr > td {
   max-width: 10rem;
-  border: 1px solid black;
+  border: 1px solid gray;
   word-wrap: break-word;
 }
 .container > table > tr > td > input {
@@ -39,4 +41,22 @@ button {
 .container > table > tr > td > h3 {
   font-weight: 400;
   text-align: center;
+  color: rgb(50, 53, 95);
+}
+.examples > h2 {
+  position: absolute;
+  left: 1rem;
+  top: 5rem;
+}
+.examples > div {
+  position: absolute;
+  top: 8rem;
+  left: 1rem;
+}
+.App > h3 {
+  position: absolute;
+  right: 1rem;
+  bottom: 10rem;
+  font-size: 1.1rem;
+  font-weight: 400;
 }

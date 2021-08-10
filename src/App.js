@@ -11,12 +11,8 @@ function App() {
     ["Empty", "Empty", "Empty", "Empty", "Empty"],
     ["Empty", "Empty", "Empty", "Empty", "Empty"],
   ]);
-  const duplicate = [
-    ["Empty", "Empty", "Empty", "Empty", "Empty"],
-    ["Empty", "Empty", "Empty", "Empty", "Empty"],
-    ["Empty", "Empty", "Empty", "Empty", "Empty"],
-    ["Empty", "Empty", "Empty", "Empty", "Empty"],
-  ];
+  const [row, setRow] = useState();
+  const [col, setCol] = useState();
   const change = (row, col, e) => {
     // let index = e.target.attributes[2].value.split("");
     // let first = parseInt(index[0]);
@@ -85,10 +81,6 @@ function App() {
       helper(matrix, i, j + 1, map, count + 1);
       helper(matrix, i - 1, j, map, count + 1);
       helper(matrix, i, j - 1, map, count + 1);
-      // helper(matrix, i - 1, j - 1, map, count + 1);
-      // helper(matrix, i - 1, j + 1, map, count + 1);
-      // helper(matrix, i + 1, j - 1, map, count + 1);
-      // helper(matrix, i + 1, j + 1, map, count + 1);
       visited[i][j] = false;
     };
     let max = Number.MAX_SAFE_INTEGER;
@@ -122,14 +114,29 @@ function App() {
         }
       }
     }
-    console.log(row, col);
-    setMatrix(duplicate);
+    // alert("The best house is at " + row, col);
+    setRow(row);
+    setCol(col);
+    // alert("The best House is at row: " + row + " col: " + col);
     // console.log(duplicate);
   };
 
   return (
     <div className="App">
       <Header />
+      <div className="examples">
+        <h2>Add these values</h2>
+        <div>
+          <ul>
+            <li>Parking</li>
+            <li>House</li>
+            <li>Market</li>
+            <li>TeaShop</li>
+            <li>Restaurant</li>
+            <li>Gym</li>
+          </ul>
+        </div>
+      </div>
       <div className="container">
         <table>
           <tr key={0}>
@@ -323,6 +330,9 @@ function App() {
         </table>
       </div>
       <button onClick={findHouse}>Find</button>
+      <h3>
+        The Best House is at row: {row}, col: {col}
+      </h3>
     </div>
   );
 }
